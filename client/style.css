@@ -21,6 +21,7 @@ body {
 #message-container div {
     background-color: #CCC;
     padding: 5px;
+    font-size: large;
   }
 
   #message-container div:nth-child(2n) {
@@ -28,5 +29,8 @@ body {
   }
 
 #form {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
     font-size: x-large;
 }
