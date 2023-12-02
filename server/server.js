@@ -4,6 +4,6 @@ const io = require("socket.io")(3000, {
     },
 })
 io.on("connection", socket => {
-    console.log("2")
+    console.log("CHECKING 2")
     console.log(socket.id)
 })
