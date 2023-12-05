@@ -30,6 +30,7 @@ body {
   border: 2px solid #43a047;
   border-radius: 5px;
   padding: 5px;
+  padding-left: 10px;
   font-size: 16px;
 }
 
@@ -47,7 +48,11 @@ body {
 }
 
 .joinChatContainer button:hover {
-  background: #2e7d32;
+  background: #3ce445;
+}
+
+.send-button:hover {
+  background: rgb(179, 178, 178) !important;
 }
 
 .chat-window {
@@ -91,6 +96,7 @@ body {
   border: 1px solid #263238;
   background: #fff;
   position: relative;
+  margin-top: 10px;
 }
 .chat-window .chat-body .message-container {
   width: 100%;
@@ -112,7 +118,7 @@ body {
   width: auto;
   height: auto;
   min-height: 40px;
-  max-width: 120px;
+  max-width: 150px;
   background-color: #43a047;
   border-radius: 5px;
   color: white;
@@ -200,4 +206,30 @@ body {
 }
 .hide {
   opacity: 0 !important;
+}
+
+
+@media (min-width: 768px) {
+  .joinChatContainer input {
+    width: 408px;
+    font-size: 20px;
+  }
+  
+  .joinChatContainer button {
+    width: 425px;
+    font-size: 20px;
+  }
+
+  .chat-window {
+    width: 50%;
+    height: 75%;
+  }
+
+  .chat-window .chat-body {
+    height: calc(550px - (45px + 70px));
+  }
+
+  .chat-window .chat-body .message .message-content {
+    max-width: 400px;
+  }
 }
