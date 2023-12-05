@@ -67,17 +67,29 @@ body {
 }
 .chat-window .chat-header p {
   display: block;
-  padding: 0 1em 0 2em;
+  padding: 0 1em 0 1em;
   color: #fff;
   font-weight: 700;
   line-height: 45px;
+}
+
+.chat-header p::before {
+  content: '🟢';
+  display: inline-block;
+  margin-right: 8px;
+  animation: blink 0.9s infinite alternate;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0.2;
+  }
 }
 
 .chat-window .chat-body {
   height: calc(450px - (45px + 70px));
   border: 1px solid #263238;
   background: #fff;
-
   position: relative;
 }
 .chat-window .chat-body .message-container {
