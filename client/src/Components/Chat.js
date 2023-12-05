@@ -6,11 +6,12 @@ function Chat({ socket, username, room }) {
   const [messageList, setMessageList] = useState([]);
 
   const sendMessage = async () => {
-    if (currentMessage !== "") {
+    const trimmedMessage = currentMessage.trim(); 
+    if (trimmedMessage !== "") {
       const messageData = {
         room: room,
         author: username,
-        message: currentMessage,
+        message: trimmedMessage,
         time:
           new Date(Date.now()).getHours() +
           ":" +
