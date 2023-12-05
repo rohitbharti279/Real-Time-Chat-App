@@ -13,8 +13,10 @@ function App() {
   const [showChat, setShowChat] = useState(false);
 
   const joinRoom = () => {
-    if (username !== "" && room !== "") {
-      socket.emit("join_room", room);
+    const trimUsername = username.trim();
+    const trimRoom = room.trim();
+    if (trimUsername !== "" && trimRoom !== "") {
+      socket.emit("join_room", trimRoom);
       setShowChat(true);
     }
   };
@@ -23,7 +25,7 @@ function App() {
     <div className="App">
       {!showChat ? (
         <div className="joinChatContainer">
-          <h3>Join a Chat</h3>
+          <h3>&#128279; Join a Chat &#x23f3;</h3>
           <input
             type="text"
             placeholder="Enter Nickname... "

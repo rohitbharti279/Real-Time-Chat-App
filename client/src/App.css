@@ -20,7 +20,7 @@ body {
 }
 
 .joinChatContainer h3 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 .joinChatContainer input {
@@ -210,6 +210,11 @@ body {
 
 
 @media (min-width: 768px) {
+
+  .joinChatContainer h3 {
+    font-size: 2.5rem;
+  }
+
   .joinChatContainer input {
     width: 408px;
     font-size: 20px;
