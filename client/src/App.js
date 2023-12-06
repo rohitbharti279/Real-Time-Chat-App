@@ -5,7 +5,8 @@ import Chat from "./Components/Chat";
 
 
 // connecting frontend to backend server
-const socket = io.connect("http://localhost:3001");
+// const socket = io.connect("http://localhost:3001"); //this is the default
+const socket = io.connect("https://real-time-chating.onrender.com"); //backend deployed on render.com
 
 function App() {
   const [username, setUsername] = useState("");
